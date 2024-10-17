@@ -12,7 +12,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top : 40px;
+    padding: 40px;
     background-color:rgb(245, 245, 245);
 }
 
@@ -25,16 +25,17 @@ h1{
 }
 
 .form-container{
-    background: linear-gradient(120deg, rgb(177, 177, 247), rgb(205, 132, 192));
+    background: linear-gradient(120deg, rgb(206, 195, 230), rgb(124, 174, 196));
     padding: 20px;
-    border-radius: 5px;;
+    border-radius: 30px;;
+    box-shadow: 3px 3px 4px rgb(109, 104, 104);
 }
 
 form{
     display: flex;
     flex-direction: column;
     padding: 30px 40px;	
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: white;
     box-shadow: 9px 9px px black;
 }
@@ -47,7 +48,7 @@ form{
 
 .input-container label{
     font-weight: 500;
-    color: #6e6c6c;
+    color: #272424;
     font-size: medium;
     margin-bottom: 10px;
 }
@@ -109,8 +110,13 @@ form{
     padding: 10px;
     border:none;
     background-color: rgb(6, 35, 103);
-    border-radius: 4px;
+    border-radius: 10px;
     color : white;
     font-size: medium;
     font-weight: 500;
+}
+
+#submit:hover{
+    background-color: rgb(11, 101, 47);
+    box-shadow: 2px 2px 4px grey;
 }
