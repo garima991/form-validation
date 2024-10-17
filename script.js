@@ -68,7 +68,6 @@ function isNumeric(str){
 }
 
 
-
 function validateName(value){
     let msg;
     if(value.length === 0){
@@ -91,69 +90,6 @@ function validateName(value){
 }
 
 
-function validateName(value){
-    let msg;
-    if(value.length === 0){
-        msg = "Name cannot be empty";
-        //nameError.innerText = ("Name cannot be empty");
-    }
-
-    if(isNumeric(value)){
-        msg = "Name should only contain alphabets";
-        //nameError.innerText = (Name should only contain alphabets);
-    }
-    else{
-        showSuccess(nameInput);
-        return true;
-    }
-
-    showError (nameInput, msg);
-    console.log("Name:", value, false);
-    return false;
-}
-
-function validateName(value){
-    let msg;
-    if(value.length === 0){
-        msg = "Name cannot be empty";
-        //nameError.innerText = ("Name cannot be empty");
-    }
-
-    if(isNumeric(value)){
-        msg = "Name should only contain alphabets";
-        //nameError.innerText = (Name should only contain alphabets);
-    }
-    else{
-        showSuccess(nameInput);
-        return true;
-    }
-
-    showError (nameInput, msg);
-    console.log("Name:", value, false);
-    return false;
-}
-
-
-function validateName(value){
-    let msg;
-    if(value.length === 0){
-        msg = "Name cannot be empty";
-        //nameError.innerText = ("Name cannot be empty");
-    }
-
-    else if(isNumeric(value)){
-        msg = "Name should only contain alphabets";
-        //nameError.innerText = (Name should only contain alphabets);
-    }
-    else{
-        showSuccess(nameInput);
-        return true;
-    }
-
-    showError (nameInput, msg);
-    console.log("Name:", value, false);
-    return false;
-}
 
 function validateUsername(value){
     let msg;
@@ -221,22 +157,26 @@ function validatePassword(value){
     return false;
 }
 
-function validateConfirmPassword(value, passwordValue){
-    if(value.length === 0){
-        msg = "Please confirm your password";  
-    }
-    if (value !== passwordValue) {
-        msg = "Passwords do not match";
-    }    
-    else{
-        showSuccess(confirmPasswordInput);
-        return true;
-    }
+    function validateConfirmPassword(value, passwordValue = null) {
+        let msg;
+        if (passwordValue === null) {
+            msg = "Please set your password";
+        } 
+        else if (value.length === 0) {
+            msg = "Please confirm your password";
+        }
+        else if (value !== passwordValue) {
+            msg = "Passwords do not match";
+        } 
+        else {
+            showSuccess(confirmPasswordInput);
+            return true;
+        }
 
-    showError (confirmPasswordInput, msg);
-    console.log("Confirm Password:", value, false);
-    return false;
-}
+        showError(confirmPasswordInput, msg);
+        console.log("Confirm Password:",value , false);
+        return false;
+    }
 
 function handleSubmit(event){
 
