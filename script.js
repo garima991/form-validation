@@ -13,13 +13,13 @@ const passwordContainer = document.getElementById("password");
 const passwordInput = document.getElementById("password-input");
     
 const confirmPasswordContainer = document.getElementById("confirm-password");
-const confirmPasswordInput = document.getElementById("confirm-pass-input");
+const confirmPasswordInput = document.getElementById("confirm-password-input");
    
    
 
 function showError (input, message) {
     // input element
-    const inputContainer = input.parentElement;
+    const inputContainer = input.closest(".input-container");
 
     // add the error class
     inputContainer.classList.remove('success');
@@ -33,7 +33,7 @@ function showError (input, message) {
 
 function showSuccess(input){
     // get the form-field element
-    const inputContainer = input.parentElement;
+    const inputContainer = input.closest(".input-container");
 
     // remove the error class
     inputContainer.classList.remove('error');
@@ -141,6 +141,7 @@ function validateEmail(value){
 }
 
 function validatePassword(value){
+    let msg;
     if(value.length === 0){
         msg = "Password cannot be empty";
     }
@@ -165,7 +166,7 @@ function validatePassword(value){
         else if (value.length === 0) {
             msg = "Please confirm your password";
         }
-        else if (value !== passwordValue) {
+        else if (value != passwordValue) {
             msg = "Passwords do not match";
         } 
         else {
