@@ -1,8 +1,5 @@
 const form = document.getElementById("sign-up");
 
-const nameContainer = document.getElementById("name");
-const nameInput = document.getElementById("name-input");
-
 const usernameContainer = document.getElementById("username");
 const usernameInput = document.getElementById("username-input");
 
@@ -66,29 +63,6 @@ function isNumeric(str){
     }
     return false;
 }
-
-
-function validateName(value){
-    let msg;
-    if(value.length === 0){
-        msg = "Name cannot be empty";
-        //nameError.innerText = ("Name cannot be empty");
-    }
-
-    if(isNumeric(value)){
-        msg = "Name should only contain alphabets";
-        //nameError.innerText = (Name should only contain alphabets);
-    }
-    else{
-        showSuccess(nameInput);
-        return true;
-    }
-
-    showError (nameInput, msg);
-    console.log("Name:", value, false);
-    return false;
-}
-
 
 
 function validateUsername(value){
@@ -183,13 +157,12 @@ function handleSubmit(event){
 
     event.preventDefault();
     
-    const isNameValid = validateName(nameInput.value);
     const isUsernameValid = validateUsername(usernameInput.value);
     const isEmailValid = validateEmail(emailInput.value);
     const isPasswordValid = validatePassword(passwordInput.value);
     const isConfirmPasswordValid = validateConfirmPassword(confirmPasswordInput.value, passwordInput.value);
 
-    const isValid = isNameValid && isUsernameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid;
+    const isValid = isUsernameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid;
 
     if(isValid){
         console.log("Form Submitted !");
