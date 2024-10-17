@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b0df84ba90.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <h1>Sign Up</h1>
+            <form id = "sign-up" action="#">
+                <div id ="name" class = "input-container">
+                    <label for="name-input">Name :</label>
+                    <input type="text" name = "name" id = "name-input" placeholder = "Enter your full name" >
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <p id = "name-error" class="input-error"></p>
+                </div>
+
+                <div id ="username" class = "input-container">
+                    <label for="username-input">Username :</label>
+                    <input type="text" name = "username" id = "username-input" placeholder = "Enter a username" >
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <p id = "username-error" class="input-error"></p>
+                </div>
+
+                <div id="email" class="input-container">
+                    <label for = "email-input">Email : </label>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <input type="email" name = "email-in" id = "email-input" placeholder = "Enter you email">
+                    <p id = "email-error" class="input-error"></p>
+                </div>
+
+                <div id = "password" class="input-container">
+                    <label for="password-input">Password : </label>
+                    <i class="fas fa-check-circle" \></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <input type="password" name = "password-in"  id = "password-input" placeholder = "Enter a strong password">
+                    <p id = "password-error" class="input-error"></p>
+                </div>
+
+                <div id ="confirm-password" class = "input-container">
+                    <label for="confirm-pass-input">Confirm Password : </label>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-eye-slash" id = "togglePass"></i>
+                        <input type="password" name = "confirm-pass" id = "confirm-pass-input" placeholder = "Re-enter your password" >
+                    </div>
+                    <p id = "confirm-password-error" class="input-error"></p>
+                </div>
+
+                <button type = "submit" id = "submit">SIGN UP</button>
+
+            </form>
+        </div>
+    </main>
+
+    <script src = "script1.js"></script>
+</body>
+</html>

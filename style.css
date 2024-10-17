@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+@import './fontawesome/scss/fontawesome.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top : 40px;
+    background-color:rgb(245, 245, 245);
+}
+
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    text-align: center;
+    padding-bottom: 15px;
+    font-weight: 800;
+}
+
+.form-container{
+    background: linear-gradient(120deg, rgb(177, 177, 247), rgb(205, 132, 192));
+    padding: 20px;
+    border-radius: 5px;;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;	
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 9px 9px px black;
+}
+
+.input-container{
+    margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.input-container label{
+    font-weight: 500;
+    color: #6e6c6c;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+
+.input-container input{
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #f0f0f0;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.input-container p{
+    color: #e01c12;
+    font-size: medium;
+}
+
+.fa-eye-slash{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.input-container.success input {
+	border-color: green;
+}
+
+.input-container.error input {
+	border-color: #e01c12;
+}
+
+.fa-check-circle, .fa-exclamation-circle {
+	visibility: hidden;
+	position: absolute;
+	top: 35px;
+	right: 10px;
+}
+
+.input-container.success i.fa-check-circle {
+	color:green;
+	visibility: visible;
+}
+
+.input-container.error i.fa-exclamation-circle {
+	color: #e01c12;
+	visibility: visible;
+}
+
+.input-wrap{
+    position: relative;
+}
+
+
+#submit{
+    padding: 10px;
+    border:none;
+    background-color: rgb(6, 35, 103);
+    border-radius: 4px;
+    color : white;
+    font-size: medium;
+    font-weight: 500;
+}
